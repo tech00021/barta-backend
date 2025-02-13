@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Barta</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body onclick="closeProfileMenu(event)">
+    <div class="home-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="profile-icon" onclick="toggleProfileMenu(event)">
+                <img src="profile-icon.png" alt="Profile">
+            </div>
+            <div class="username" id="display-username">User's Name</div>
+        </div>
+        
+        <!-- Profile Slide Menu -->
+        <div class="profile-menu" id="profile-menu">
+            <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="user-data" id="user-data">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Username:</strong> johndoe123</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <button onclick="editProfile()">Edit</button>
+            </div>
+            <button onclick="logout()">Log Out</button>
+        </div>
+        
+        <!-- Friends List -->
+        <div class="friends-list">
+            <h2>Friends</h2>
+            <ul id="friends">
+                <li>Friend 1</li>
+                <li>Friend 2</li>
+                <li>Friend 3</li>
+            </ul>
+        </div>
+        
+        <!-- Add Friend Button -->
+        <div class="add-friend" onclick="addNewFriend()">
+            +
+        </div>
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>
